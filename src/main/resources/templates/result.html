@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="card">
+            <div class="card-header ">
+               <center> Student Information </center>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><strong>Name:</strong> <span th:text="${getaliean.name}"></span></p>
+                <p class="card-text"><strong>Roll No:</strong> <span th:text="${getaliean.rollno}"></span></p>
+                <p class="card-text"><strong>Year:</strong> <span th:text="${getaliean.year}"></span></p>
+                <p class="card-text"><strong>Batch:</strong> <span th:text="${getaliean.batch}"></span></p>
+                <p class="card-text"><strong>Phone No:</strong> <span th:text="${getaliean.phoneno}"></span></p>
+                <p class="card-text"><strong>Guardian No:</strong> <span th:text="${getaliean.guardianno}"></span></p>
+                <p class="card-text"><strong>Address:</strong> <span th:text="${getaliean.address}"></span></p>
+                <p class="card-text"><strong>Projects:</strong> <span th:text="${getaliean.projects}"></span></p>
+                <p class="card-text"><strong>Certifications:</strong> <span th:text="${getaliean.certification}"></span></p>
+                <p class="card-text"><strong>Internships:</strong> <span th:text="${getaliean.internships}"></span></p>
+                <p class="card-text"><strong>Activities:</strong> <span th:text="${getaliean.activities}"></span></p>
+                <p class="card-text"><strong>CGPA:</strong> <span th:text="${getaliean.cgpa}"></span></p>
+                <p class="card-text"><strong>Percentage:</strong> <span th:text="${getaliean.percentage}"></span></p>
+                <p class="card-text"><strong>History of Arrears:</strong> <span th:text="${getaliean.historyofarrears == 1 ? 'Yes' : 'No'}"></span></p>
+                <p class="card-text"><strong>Problem Solving:</strong> <span th:text="${getaliean.problemsolving == 1 ? 'Yes' : 'No'}"></span></p>
+                <p class="card-text"><strong>Co-curricular Activities:</strong> <span th:text="${getaliean.cocircular}"></span></p>
+                <p class="card-text"><strong>Extra-curricular Activities:</strong> <span th:text="${getaliean.extracircular}"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
