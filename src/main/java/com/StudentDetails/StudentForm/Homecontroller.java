@@ -21,7 +21,7 @@ public class Homecontroller {
 	@Autowired
 	Dao obi;
 
-	@RequestMapping("/registration")
+	@RequestMapping("/")
 	public String index()
 	{
 		return "index";
@@ -31,14 +31,14 @@ public class Homecontroller {
 	@RequestMapping(value = "studentsinfo", method = RequestMethod.POST)
 	public String info(@ModelAttribute("prakash") Details obj, Model model, @RequestParam(value = "phoneno", required = false) Long mobileno) {
 	    if (mobileno == null || mobileno == 0) {
-	        return "redirect:/show";
+	        return "redirect:/studentsdetails";
 	    } else {
 	        obi.save(obj);
-	        return "redirect:/show";  
+	        return "redirect:/studentsdetails";  
 	    }
 	}
 
-	@RequestMapping(value = "show", method = RequestMethod.GET)
+	@RequestMapping(value = "studentsdetails", method = RequestMethod.GET)
 	public String show(Model model) {
 	    List<Details> detailsList = obi.findAll();
 	    model.addAttribute("detailsList1", detailsList);
@@ -49,7 +49,7 @@ public class Homecontroller {
      public String del(@RequestParam("idnumber") int numbers)
      {
    	  obi.deleteById(numbers);
-   	  return "redirect:/show";
+   	  return "redirect:/studentsdetails";
      }
 	
       @RequestMapping("studentinfo")
