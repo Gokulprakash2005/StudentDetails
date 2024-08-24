@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Information Form</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+  <center><h1>Student Information Form</h1></center>
+    <form action="studentsinfo" method="post">
+        <div class="form-group">
+            <label for="id">Id</label>
+            <input type="text" class="form-control" id="id" name="id" th:value="${getalieanupd.id}">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" th:value="${getalieanupd.name}">
+        </div>
+        <div class="form-group">
+            <label for="rollno">Roll no</label>
+            <input type="text" class="form-control" id="rollno" name="rollno" th:value="${getalieanupd.rollno}">
+        </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="text" class="form-control" id="year" name="year" th:value="${getalieanupd.year}">
+        </div>
+        <div class="form-group">
+            <label for="batch">Batch</label>
+            <input type="text" class="form-control" id="batch" name="batch" th:value="${getalieanupd.batch}">
+        </div>
+        <div class="form-group">
+            <label for="phoneno">Phone no</label>
+            <input type="text" class="form-control" id="phoneno" name="phoneno" th:value="${getalieanupd.phoneno}">
+        </div>
+        <div class="form-group">
+            <label for="guardianno">Guardian no</label>
+            <input type="text" class="form-control" id="guardianno" name="guardianno" th:value="${getalieanupd.guardianno}">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" name="address" th:text="${getalieanupd.address}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="projects">Projects</label>
+            <textarea class="form-control" id="projects" name="projects" th:text="${getalieanupd.projects}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="certification">Certification</label>
+            <textarea class="form-control" id="certification" name="certification" th:text="${getalieanupd.certification}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="internships">Internships</label>
+            <textarea class="form-control" id="internships" name="internships" th:text="${getalieanupd.internships}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="activities">Activities</label>
+            <textarea class="form-control" id="activities" name="activities" th:text="${getalieanupd.activities}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="cgpa">CGPA</label>
+            <input type="text" class="form-control" id="cgpa" name="cgpa" th:value="${getalieanupd.cgpa}">
+        </div>
+        <div class="form-group">
+            <label for="percentage">Percentage</label>
+            <input type="text" class="form-control" id="percentage" name="percentage" th:value="${getalieanupd.percentage}">
+        </div>
+        <div class="form-group">
+            <label for="historyofarrears">History of arrears</label>
+            <textarea class="form-control" id="historyofarrears" name="historyofarrears" th:text="${getalieanupd.historyofarrears}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="problemsolving">Problem Solving</label>
+            <textarea class="form-control" id="problemsolving" name="problemsolving" th:text="${getalieanupd.problemsolving}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="cocircular">Co-circular</label>
+            <textarea class="form-control" id="cocircular" name="cocircular" th:text="${getalieanupd.cocircular}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="extracircular">Extra circular</label>
+            <textarea class="form-control" id="extracircular" name="extracircular" th:text="${getalieanupd.extracircular}"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

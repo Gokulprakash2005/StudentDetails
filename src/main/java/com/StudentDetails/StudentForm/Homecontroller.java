@@ -60,8 +60,11 @@ public class Homecontroller {
 
       
       @RequestMapping("updates")
-      public String updatesdata() {
-          return "index";
+      public String updatesdata(@RequestParam("idnumbers") int nums,Model mods)
+      {
+    	    obi.findById(nums).ifPresent(alienupd -> mods.addAttribute("getalieanupd", alienupd));
+    	    return "upd";
+    	  
       }
       
 }

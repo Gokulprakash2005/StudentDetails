@@ -1,91 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-<style>
-.Hovs {
-    margin-left: 20px;
-}
-</style>
-
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .Hovs {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
- <div class="card">
-    <h3 class="card-body bg-primary text-white d-flex align-items-center justify-content-center">Students Details</h3>
+
+<div class="card">
+    <h3 class="card-body bg-primary text-white text-center">Students Details</h3>
 </div>
 
-<div class="d-flex align-items-center justify-content-around mt-5">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 mb-3">
+            <form action="studentinfo" method="post">
+                <div class="form-group">
+                    <label for="idnum">Enter the Id:</label>
+                    <input class="form-control Hovs" type="text" id="idnum" name="idnum" placeholder="Enter your Id Number...">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+            </form>
+        </div>
 
-<form action="studentinfo" method="post">
-  <label for="idnum">Enter the Id:</label>
-  <input class="p-2 Hovs" type="text" id="idnum" name="idnum" placeholder="Enter your Id Number...">
-  <button type="submit" class="btn btn-primary Hovs" >Search</button>
-</form>
+        <div class="col-md-4 col-sm-6 mb-3">
+            <form action="deletes" method="post">
+                <div class="form-group">
+                    <label for="idnumber">Enter the Id:</label>
+                    <input class="form-control Hovs" type="text" id="idnumber" name="idnumber" placeholder="Enter your Id Number...">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Delete</button>
+            </form>
+        </div>
 
-<form action="deletes" method="post">
-  <label for="idnumber">Enter the Id:</label>
-  <input class="p-2 Hovs" type="text" id="idnumber" name="idnumber" placeholder="Enter your Id Number...">
-  <button type="submit" class="btn btn-primary Hovs" >Delete</button>
-</form>
+        <div class="col-md-4 col-sm-6 mb-3">
+            <form action="updates" method="post">
+                <div class="form-group">
+                    <label for="idnumbers">Enter the Id :</label>
+                    <input class="form-control Hovs" type="text" id="idnumbers" name="idnumbers" placeholder="Enter your Id Number...">
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Update</button>
+            </form>
+        </div>
 
-<form action="updates" method="post">
-  <label >Update the student:</label>
-  <button type="submit" class="btn btn-danger Hovs">Update</button>
-</form>
-
+    </div>
 </div>
 
-<div class="table-responsive mt-5">
+<div class="container mt-5 table-responsive">
     <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>name</th>
-          <th class="text-nowrap">Roll No</th>
-          <th>Year</th>
-          <th>Batch</th>
-          <th class="text-nowrap">Phone No</th>
-          <th class="text-nowrap">Guardian No</th>
-          <th>Address</th>
-          <th>Projects</th>
-          <th>Certification</th>
-          <th>Internships</th>
-          <th>Activities</th>
-          <th>CGPA</th>
-          <th>Percentage</th>
-          <th class="text-nowrap">History of Arrears</th>
-          <th class="text-nowrap">Problem Solving</th>
-          <th class="text-nowrap">Co-curricular</th>
-          <th class="text-nowrap">Extra-curricular</th>
-        </tr>
-      </thead>
-      <tbody> 
-        
-        <tr th:each="prakash : ${detailsList1}">
-    <td th:text="${prakash.id}"></td>
-    <td th:text="${prakash.name}"></td>
-    <td th:text="${prakash.rollno}"></td>
-    <td th:text="${prakash.year}"></td>
-    <td th:text="${prakash.batch}"></td>
-    <td th:text="${prakash.phoneno}"></td>
-    <td th:text="${prakash.guardianno}"></td>
-    <td th:text="${prakash.address}"></td>
-    <td th:text="${prakash.projects}"></td>
-    <td th:text="${prakash.certification}"></td>
-    <td th:text="${prakash.internships}"></td>
-    <td th:text="${prakash.activities}"></td>
-    <td th:text="${prakash.cgpa}"></td>
-    <td th:text="${prakash.percentage}"></td>
-    <td th:text="${prakash.historyofarrears}"></td>
-    <td th:text="${prakash.problemsolving}"></td>
-    <td th:text="${prakash.cocircular}"></td>
-    <td th:text="${prakash.extracircular}"></td>
-  </tr>
-    
-      </tbody>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th class="text-nowrap">Roll No</th>
+                <th>Year</th>
+                <th>Batch</th>
+                <th class="text-nowrap">Phone No</th>
+                <th class="text-nowrap">Guardian No</th>
+                <th>Address</th>
+                <th>Projects</th>
+                <th>Certification</th>
+                <th>Internships</th>
+                <th>Activities</th>
+                <th>CGPA</th>
+                <th>Percentage</th>
+                <th class="text-nowrap">History of Arrears</th>
+                <th class="text-nowrap">Problem Solving</th>
+                <th class="text-nowrap">Co-curricular</th>
+                <th class="text-nowrap">Extra-curricular</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr th:each="prakash : ${detailsList1}">
+                <td th:text="${prakash.id}"></td>
+                <td th:text="${prakash.name}"></td>
+                <td th:text="${prakash.rollno}"></td>
+                <td th:text="${prakash.year}"></td>
+                <td th:text="${prakash.batch}"></td>
+                <td th:text="${prakash.phoneno}"></td>
+                <td th:text="${prakash.guardianno}"></td>
+                <td th:text="${prakash.address}"></td>
+                <td th:text="${prakash.projects}"></td>
+                <td th:text="${prakash.certification}"></td>
+                <td th:text="${prakash.internships}"></td>
+                <td th:text="${prakash.activities}"></td>
+                <td th:text="${prakash.cgpa}"></td>
+                <td th:text="${prakash.percentage}"></td>
+                <td th:text="${prakash.historyofarrears}"></td>
+                <td th:text="${prakash.problemsolving}"></td>
+                <td th:text="${prakash.cocircular}"></td>
+                <td th:text="${prakash.extracircular}"></td>
+            </tr>
+        </tbody>
     </table>
 </div>
 
